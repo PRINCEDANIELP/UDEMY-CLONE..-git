@@ -10,6 +10,10 @@
     padding: 10px;
     border-bottom: solid black 1px;
     align-items: center;
+    position:sticky;
+    top:0px;
+    background-color: white;
+ z-index:10;
 }
 
 .navbar__s1__title {
@@ -30,7 +34,9 @@
 .navbar__s2 input {
     border: none;
     font-size: 16px;
-    width: 80%;
+    width: 80%; 
+    color: black;
+    background-color: transparent;
 
 }
 
@@ -43,7 +49,24 @@
     gap: 15px;
     align-items: center;
 }
-
+/*my learning*/
+.mylearning
+{
+    position: relative;
+    cursor: pointer;
+}
+.mylearning_pop{
+    position: absolute;
+ background-color: white;
+    border: solid black 1px;
+    padding: 10px;
+    top: 30px;
+    left: 0;
+    display: none;
+}
+.mylearning:hover .mylearning_pop{
+    display: block;
+}
 .categories {
     display: flex;
     border-bottom: solid black 1px;
@@ -57,12 +80,44 @@
     color: white;
     border-radius: 30px;
     padding: 10px;
-
+    border: solid  blueviolet 1px;
 }
-
+.categories p:hover{
+    transition-duration: 1s;
+    color: black;
+    background-color: transparent;
+}
+.sale-img{
+    position: relative;
+    z-index:2;
+}
 .sale-img img {
     width: 100%;
+}
 
+.sale-img__one{
+    position: absolute;
+    background-color: white;
+    border: black solid 1px;
+    top : 100px;
+    left: 20px;
+    width:fit-content;
+    padding:10px;
+    z-index:1 ;
+    animation-name: pop;
+    animation-duration:1s;
+    opacity:0;
+    animation-fill-mode: forwards;
+}
+@keyframes pop{
+    0%{
+        opacity:;
+        transform: scale(0);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 .recommended {
